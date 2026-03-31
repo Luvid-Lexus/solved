@@ -3,7 +3,7 @@ input=sys.stdin.readline
 
 A,P=input().split()
 P=int(P)
-D=[A]
+D=[int(A)]
 
 while True:
     x=0
