@@ -3,9 +3,16 @@ input=sys.stdin.readline
 import math
 
 N,K,M = map(int, input().split())
-result=0
+result=1
 
-for i in range(1,N):
-    result+=math.comb(i,K-1)%M
+while N>0 or K>0:
+    n_i,k_i = N%M, K%M
+    N,K = N//M, K//M
+    
+    if n_i < k_i:
+        result=0
+        break
+    else:
+        result*=math.comb(n_i,k_i)%M
 
-print(result%M)
+print(result)
