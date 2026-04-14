@@ -13,6 +13,6 @@ while N>0 or K>0:
         result=0
         break
     else:
-        result*=math.comb(n_i,k_i)%M
+        result = (result * math.comb(n_i, k_i)) % M
 
 print(result)
