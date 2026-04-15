@@ -18,7 +18,26 @@ for i in range(N):
     elif f2[i] == 'v':
         slide+=1
 
+if jump>=J:
+    jump-=J
+    J=0
+else:
+    J-=jump
+    jump=0
 
+if slide>=S:
+    slide-=S
+    S=0
+else:
+    S-=slide
+    slide=0    
+
+if d_jump>=(J//2):
+    d_jump-=J//2
+else:
+    d_jump=0
+
+H-=K*(jump+slide+d_jump)
 
 if H>0:
     print(H)
