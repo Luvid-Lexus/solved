@@ -1,6 +1,5 @@
 import sys
 input=sys.stdin.readline
-import math
 
 N,K,M = map(int, input().split())
 pn=[]
