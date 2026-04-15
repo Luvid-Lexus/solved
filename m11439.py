@@ -16,14 +16,14 @@ def cnt_pn(N,n):
     cnt=0
     while N>0:
         cnt+=N//n
-        N-=1
+        N//=n
     return cnt
 
-result=0
+result=1
 
 for n in pn:
     final_cnt = cnt_pn(N,n) - cnt_pn(K,n) - cnt_pn(N-K,n)
-    if final_cnt < 0:
-        result=math.comb(N,K)%M
+    if final_cnt > 0:
+        result=result*pow(n,final_cnt) % M
 
 print(result)
